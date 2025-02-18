@@ -1,0 +1,5 @@
+/Users/marcinzawadiak/Desk/SDLGAME/build/CMakeFiles/Shattered-Vault.dir
+/Users/marcinzawadiak/Desk/SDLGAME/build/CMakeFiles/edit_cache.dir
+/Users/marcinzawadiak/Desk/SDLGAME/build/CMakeFiles/rebuild_cache.dir
+/Users/marcinzawadiak/Desk/SDLGAME/build/tests/CMakeFiles/edit_cache.dir
+/Users/marcinzawadiak/Desk/SDLGAME/build/tests/CMakeFiles/rebuild_cache.dir
