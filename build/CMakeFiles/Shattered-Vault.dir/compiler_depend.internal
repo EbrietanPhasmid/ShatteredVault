@@ -1010,6 +1010,8 @@ CMakeFiles/Shattered-Vault.dir/src/main.cc.o
  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h
  /Users/marcinzawadiak/Desk/SDLGAME/include/windowrenderer.hh
  /Users/marcinzawadiak/Desk/SDLGAME/src/windowrenderer.cc
+ /Users/marcinzawadiak/Desk/SDLGAME/utils/drawcall.h
+ /Users/marcinzawadiak/Desk/SDLGAME/utils/size.h
  /opt/homebrew/include/SDL2/SDL.h
  /opt/homebrew/include/SDL2/SDL_assert.h
  /opt/homebrew/include/SDL2/SDL_atomic.h

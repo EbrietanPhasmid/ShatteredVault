@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/CMakeFiles/gtest"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/CMakeFiles/gtest.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/CMakeFiles/gtest-complete.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/gtest/src/gtest-stamp/gtest-build.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/gtest/src/gtest-stamp/gtest-configure.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/gtest/src/gtest-stamp/gtest-download.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/gtest/src/gtest-stamp/gtest-install.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/gtest/src/gtest-stamp/gtest-mkdir.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/gtest/src/gtest-stamp/gtest-patch.rule"
+		},
+		{
+			"file" : "/Users/marcinzawadiak/Desk/SDLGAME/build/gtest/src/gtest-stamp/gtest-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"gtest"
+		],
+		"name" : "gtest"
+	}
+}

@@ -6,6 +6,5 @@
 
 struct DrawCall {
 SDL_Texture* texture;
-SDL_Point location;
-Size size;
+SDL_Rect* rect;
 };

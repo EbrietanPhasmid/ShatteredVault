@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /Users/marcinzawadiak/Desk/SDLGAME/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/Applications/CMake.app/Contents/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/Applications/CMake.app/Contents/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/Applications/CMake.app/Contents/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -129,6 +184,71 @@ Shattered-Vault/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault.dir/build.make CMakeFiles/Shattered-Vault.dir/build
 .PHONY : Shattered-Vault/fast
 
+#=============================================================================
+# Target rules for targets named Shattered-Vault-Tests
+
+# Build rule for target.
+Shattered-Vault-Tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Shattered-Vault-Tests
+.PHONY : Shattered-Vault-Tests
+
+# fast build rule for target.
+Shattered-Vault-Tests/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/build
+.PHONY : Shattered-Vault-Tests/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
 src/main.o: src/main.cc.o
 .PHONY : src/main.o
 
@@ -153,6 +273,30 @@ src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault.dir/build.make CMakeFiles/Shattered-Vault.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
+tests/drawcalltest.o: tests/drawcalltest.cc.o
+.PHONY : tests/drawcalltest.o
+
+# target to build an object file
+tests/drawcalltest.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/tests/drawcalltest.cc.o
+.PHONY : tests/drawcalltest.cc.o
+
+tests/drawcalltest.i: tests/drawcalltest.cc.i
+.PHONY : tests/drawcalltest.i
+
+# target to preprocess a source file
+tests/drawcalltest.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/tests/drawcalltest.cc.i
+.PHONY : tests/drawcalltest.cc.i
+
+tests/drawcalltest.s: tests/drawcalltest.cc.s
+.PHONY : tests/drawcalltest.s
+
+# target to generate assembly for a file
+tests/drawcalltest.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/tests/drawcalltest.cc.s
+.PHONY : tests/drawcalltest.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -160,11 +304,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... Shattered-Vault"
+	@echo "... Shattered-Vault-Tests"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... tests/drawcalltest.o"
+	@echo "... tests/drawcalltest.i"
+	@echo "... tests/drawcalltest.s"
 .PHONY : help
 
 

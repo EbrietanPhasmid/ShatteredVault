@@ -15,17 +15,26 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckCSourceCompiles.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckIncludeFile.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/CheckLibraryExists.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-C.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/AppleClang-CXX.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/Clang.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Compiler/GNU.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/ExternalProject/shared_internal_commands.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/FetchContent.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/FetchContent/CMakeLists.cmake.in"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPackageMessage.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPkgConfig.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindPythonInterp.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/FindThreads.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+  "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-C.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang-CXX.cmake"
   "/Applications/CMake.app/Contents/share/cmake-3.31/Modules/Linker/AppleClang.cmake"
@@ -44,7 +53,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.31.3/CMakeCCompiler.cmake"
   "CMakeFiles/3.31.3/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.31.3/CMakeSystem.cmake"
-  "/Users/marcinzawadiak/Desk/SDLGAME/tests/CMakeLists.txt"
+  "_deps/googletest-src/CMakeLists.txt"
+  "_deps/googletest-src/googlemock/CMakeLists.txt"
+  "_deps/googletest-src/googletest/CMakeLists.txt"
+  "_deps/googletest-src/googletest/cmake/internal_utils.cmake"
   )
 
 # The corresponding makefile is:
@@ -55,11 +67,19 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
+  "_deps/googletest-subbuild/CMakeLists.txt"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "_deps/googletest-build/googlemock/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Shattered-Vault.dir/DependInfo.cmake"
+  "CMakeFiles/Shattered-Vault-Tests.dir/DependInfo.cmake"
+  "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake"
+  "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake"
+  "_deps/googletest-build/googlemock/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
+  "_deps/googletest-build/googlemock/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )

@@ -15,17 +15,16 @@
 
 int main() {
 
-  // ============================ DO NOT TOUCH
-  // =====================================================
+  // ========== DO NOT TOUCH =======================================
 
   if (SDL_Init(SDL_INIT_VIDEO) < 0) {
     std::cout << "SDL could not initialise.\n"
-              << "SDL Error: " << SDL_GetError() << std::endl;
+              << "SDL ERROR: " << SDL_GetError() << std::endl;
     return 0;
   }
   if (!(IMG_Init(IMG_INIT_PNG))) {
     std::cout << "SDL_image could not initialise.\n"
-              << "SDL Error: " << SDL_GetError() << std::endl;
+              << "SDL ERROR: " << SDL_GetError() << std::endl;
   }
 
   WindowRenderer window_renderer =
@@ -42,11 +41,9 @@ int main() {
     }
 
     // --------------------------------------- GAME LOOP
-    // --------------------------------------
 
     // ----------------------------------------------------------------------------------------
 
-    window_renderer.draw();
   }
   SDL_Quit();
   return 0;

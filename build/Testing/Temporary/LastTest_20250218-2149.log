@@ -1,0 +1,21 @@
+Start testing: Feb 18 22:55 CET
+----------------------------------------------------------
+1/1 Testing: DrawCallTest
+1/1 Test: DrawCallTest
+Command: "/Users/marcinzawadiak/Desk/SDLGAME/build/Shattered-Vault-Tests"
+Directory: /Users/marcinzawadiak/Desk/SDLGAME/build
+"DrawCallTest" start time: Feb 18 22:55 CET
+Output:
+----------------------------------------------------------
+2025-02-18 22:55:34.641 Shattered-Vault-Tests[40266:8464964] +[IMKClient subclass]: chose IMKClient_Modern
+2025-02-18 22:55:34.641 Shattered-Vault-Tests[40266:8464964] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+2025-02-18 22:55:35.137 Shattered-Vault-Tests[40266:8464964] TSM AdjustCapsLockLEDForKeyTransitionHandling - _ISSetPhysicalKeyboardCapsLockLED Inhibit
+<end of output>
+Test time =   1.24 sec
+----------------------------------------------------------
+Test Passed.
+"DrawCallTest" end time: Feb 18 22:55 CET
+"DrawCallTest" time elapsed: 00:00:01
+----------------------------------------------------------
+
+End testing: Feb 18 22:55 CET

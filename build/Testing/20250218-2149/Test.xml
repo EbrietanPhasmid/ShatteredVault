@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20250218-2149-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.31.3"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="Marcins-MacBook-Pro.local"
+	OSRelease="15.3"
+	OSVersion="24D60"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="Apple"
+	VendorID="Apple"
+	FamilyID="0"
+	ModelID="0"
+	ModelName="Apple M1"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="8"
+	NumberOfPhysicalCPU="8"
+	TotalVirtualMemory="1024"
+	TotalPhysicalMemory="16384"
+	LogicalProcessorsPerPhysical="8"
+	ProcessorClockFrequency="0"
+	>
+	<Testing>
+		<StartDateTime>Feb 18 22:55 CET</StartDateTime>
+		<StartTestTime>1739915734</StartTestTime>
+		<TestList>
+			<Test>./DrawCallTest</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>DrawCallTest</Name>
+			<Path>.</Path>
+			<FullName>./DrawCallTest</FullName>
+			<FullCommandLine>/Users/marcinzawadiak/Desk/SDLGAME/build/Shattered-Vault-Tests</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>1.24352</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/Users/marcinzawadiak/Desk/SDLGAME/build/Shattered-Vault-Tests</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJylzUFrwjAYxvG7n+K9j0gb08z1Jm6yooVByi4ikjYva2ZIJO/bg99+noaHCcLOz//hJwtZiUKKcglS1lVVL9RcqxLMaJkxoxOfdgosOiSmvSqk1vVSafWi1QGe9k27XQePkYGmfgiW6FDDMCZC+J2ObXKY40z+m2rieWKDRD7FP8Hb4D5bzcvF82NsZ1pYue+JeG3PtEvDaff2ukl5i5cu20ier9K7jS74+AUCjo0xyB/jhfxgw7Xqk83u5gtNHH3vefYDTdF3YA==</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Feb 18 22:55 CET</EndDateTime>
+		<EndTestTime>1739915735</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
