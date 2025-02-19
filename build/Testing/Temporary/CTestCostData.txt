@@ -1,2 +1,2 @@
-DrawCallTest 1 1.24352
+DrawCallTest 8 1.63685
 ---

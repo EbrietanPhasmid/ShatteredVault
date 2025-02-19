@@ -65,16 +65,6 @@ CMAKE_BINARY_DIR = /Users/marcinzawadiak/Desk/SDLGAME/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
-	/Applications/CMake.app/Contents/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
-
-# Special rule for the target test
-test/fast: test
-.PHONY : test/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -185,19 +175,6 @@ Shattered-Vault/fast:
 .PHONY : Shattered-Vault/fast
 
 #=============================================================================
-# Target rules for targets named Shattered-Vault-Tests
-
-# Build rule for target.
-Shattered-Vault-Tests: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Shattered-Vault-Tests
-.PHONY : Shattered-Vault-Tests
-
-# fast build rule for target.
-Shattered-Vault-Tests/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/build
-.PHONY : Shattered-Vault-Tests/fast
-
-#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -273,30 +250,6 @@ src/main.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault.dir/build.make CMakeFiles/Shattered-Vault.dir/src/main.cc.s
 .PHONY : src/main.cc.s
 
-tests/drawcalltest.o: tests/drawcalltest.cc.o
-.PHONY : tests/drawcalltest.o
-
-# target to build an object file
-tests/drawcalltest.cc.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/tests/drawcalltest.cc.o
-.PHONY : tests/drawcalltest.cc.o
-
-tests/drawcalltest.i: tests/drawcalltest.cc.i
-.PHONY : tests/drawcalltest.i
-
-# target to preprocess a source file
-tests/drawcalltest.cc.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/tests/drawcalltest.cc.i
-.PHONY : tests/drawcalltest.cc.i
-
-tests/drawcalltest.s: tests/drawcalltest.cc.s
-.PHONY : tests/drawcalltest.s
-
-# target to generate assembly for a file
-tests/drawcalltest.cc.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Shattered-Vault-Tests.dir/build.make CMakeFiles/Shattered-Vault-Tests.dir/tests/drawcalltest.cc.s
-.PHONY : tests/drawcalltest.cc.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -309,9 +262,7 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... test"
 	@echo "... Shattered-Vault"
-	@echo "... Shattered-Vault-Tests"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
@@ -319,9 +270,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... tests/drawcalltest.o"
-	@echo "... tests/drawcalltest.i"
-	@echo "... tests/drawcalltest.s"
 .PHONY : help
 
 

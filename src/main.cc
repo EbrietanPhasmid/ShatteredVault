@@ -2,6 +2,7 @@
 #include <chrono>
 #include <iostream>
 #include <string>
+#include <cstring>
 #include <thread>
 #include <vector>
 
@@ -12,6 +13,9 @@
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
+
+#define SPRITE_SIZE 32
+constexpr int SCALE_VALUE = SCREEN_WIDTH/SPRITE_SIZE;
 
 int main() {
 
@@ -30,18 +34,26 @@ int main() {
   WindowRenderer window_renderer =
       WindowRenderer("Shattered Vault", SCREEN_WIDTH, SCREEN_HEIGHT);
 
-  SDL_Event event;
   bool game_running = true;
+  int shit = 0;
   while (game_running) {
-
-    SDL_WaitEvent(&event);
+    SDL_Event event;
+    SDL_PollEvent(&event);
 
     if (event.type == SDL_QUIT) {
       game_running = false;
     }
 
     // --------------------------------------- GAME LOOP
-
+    window_renderer.clear();
+    SDL_Texture* texture = window_renderer.load_texture(SDL_GetBasePath() + std::string("../assets/textures/enemy.png"));
+    int width, height = 0;
+    SDL_QueryTexture(texture,NULL,NULL,&width,&height);
+    shit++;
+    SDL_Rect rect {shit,shit,width*3,height*3};
+    const DrawCall draw_call = {texture, &rect};
+    window_renderer.draw_texture(&draw_call);
+    window_renderer.draw();
     // ----------------------------------------------------------------------------------------
 
   }

@@ -20,8 +20,7 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				},
 				{
@@ -47,7 +46,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-26173723b8f2930b10f7.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock-Debug-59c9557175843b243587.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.6.2"
@@ -57,14 +56,14 @@
 					"source" : "build/_deps/googletest-src/googlemock",
 					"targetIndexes" : 
 					[
-						2,
-						3
+						1,
+						2
 					]
 				},
 				{
 					"build" : "_deps/googletest-build/googlemock/gtest",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-_deps.googletest-build.googlemock.gtest-Debug-277d46df9b4f358b5db0.json",
+					"jsonFile" : "directory-_deps.googletest-build.googlemock.gtest-Debug-b016b0463dd72b3268a6.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "2.6.2"
@@ -74,8 +73,8 @@
 					"source" : "build/_deps/googletest-src/googletest",
 					"targetIndexes" : 
 					[
-						4,
-						5
+						3,
+						4
 					]
 				}
 			],
@@ -94,8 +93,7 @@
 					"name" : "Shattered-Vault",
 					"targetIndexes" : 
 					[
-						0,
-						1
+						0
 					]
 				},
 				{
@@ -123,8 +121,8 @@
 					"parentIndex" : 1,
 					"targetIndexes" : 
 					[
-						2,
-						3
+						1,
+						2
 					]
 				},
 				{
@@ -136,8 +134,8 @@
 					"parentIndex" : 2,
 					"targetIndexes" : 
 					[
-						4,
-						5
+						3,
+						4
 					]
 				}
 			],
@@ -148,13 +146,6 @@
 					"id" : "Shattered-Vault::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Shattered-Vault-Debug-436887864321d1b89438.json",
 					"name" : "Shattered-Vault",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
-					"id" : "Shattered-Vault-Tests::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Shattered-Vault-Tests-Debug-eec7eefa3ef7404c6668.json",
-					"name" : "Shattered-Vault-Tests",
 					"projectIndex" : 0
 				},
 				{

@@ -2,6 +2,7 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
+#include <string>
 
 #include "drawcall.h"
 
@@ -10,7 +11,7 @@ public:
   WindowRenderer(const char *title, int width, int height);
   ~WindowRenderer();
 
-  SDL_Texture* load_texture(char * const file_path);
+  SDL_Texture* load_texture(std::string file_path);
   void draw_texture(const DrawCall* const & draw_call);
   void clear();
   void draw();

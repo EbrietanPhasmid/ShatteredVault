@@ -36,9 +36,9 @@ void WindowRenderer::draw() {
   SDL_RenderPresent(renderer);
 }
 
-SDL_Texture* WindowRenderer::load_texture(char * const file_path) {
+SDL_Texture* WindowRenderer::load_texture(std::string file_path) {
   SDL_Texture *texture{NULL};
-  texture = IMG_LoadTexture(renderer, file_path);
+  texture = IMG_LoadTexture(renderer, file_path.c_str());
   if (texture == NULL) {
     std::cout << "Texture could not be loaded. No texture found at path "
               << file_path << "\n"

@@ -39,7 +39,7 @@
 				"_deps/googletest-build/googlemock/libgmock.a"
 			],
 			"targetId" : "gmock::@0f7bb11d64f3678238c7",
-			"targetIndex" : 2,
+			"targetIndex" : 1,
 			"type" : "target"
 		},
 		{
@@ -48,7 +48,7 @@
 			"cxxModuleBmiTarget" : 
 			{
 				"id" : "gmock::@0f7bb11d64f3678238c7",
-				"index" : 2
+				"index" : 1
 			},
 			"destination" : "lib",
 			"type" : "cxxModuleBmi"
@@ -62,7 +62,7 @@
 				"_deps/googletest-build/googlemock/libgmock_main.a"
 			],
 			"targetId" : "gmock_main::@0f7bb11d64f3678238c7",
-			"targetIndex" : 3,
+			"targetIndex" : 2,
 			"type" : "target"
 		},
 		{
@@ -71,7 +71,7 @@
 			"cxxModuleBmiTarget" : 
 			{
 				"id" : "gmock_main::@0f7bb11d64f3678238c7",
-				"index" : 3
+				"index" : 2
 			},
 			"destination" : "lib",
 			"type" : "cxxModuleBmi"
