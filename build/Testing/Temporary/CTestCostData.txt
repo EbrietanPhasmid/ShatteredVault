@@ -1,2 +1,0 @@
-DrawCallTest 8 1.63685
----
