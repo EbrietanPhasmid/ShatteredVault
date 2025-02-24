@@ -69,3 +69,13 @@ void WindowRenderer::draw_texture(SDL_Texture* const & texture, int && x, int &&
   SDL_Rect rect{x,y,width,height};
   SDL_RenderCopy(renderer, texture, NULL,&rect); 
 }
+  
+void WindowRenderer::draw_texture(SDL_Texture* const & texture, SDL_Point* position, int scale) {
+  int width, height;
+  SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+  width *= scale;
+  height *= scale;
+  SDL_Rect rect{position->x,position->y,width,height};
+  SDL_RenderCopy(renderer, texture, NULL,&rect); 
+
+}

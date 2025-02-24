@@ -1007,10 +1007,12 @@ CMakeFiles/Shattered-Vault.dir/src/main.cc.o: /Users/marcinzawadiak/Desk/SDLGAME
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdarg.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stddef.h \
   /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h \
+  /Users/marcinzawadiak/Desk/SDLGAME/include/camera.hh \
   /Users/marcinzawadiak/Desk/SDLGAME/include/windowrenderer.hh \
+  /Users/marcinzawadiak/Desk/SDLGAME/src/camera.cc \
   /Users/marcinzawadiak/Desk/SDLGAME/src/windowrenderer.cc \
+  /Users/marcinzawadiak/Desk/SDLGAME/utils/clock.hh \
   /Users/marcinzawadiak/Desk/SDLGAME/utils/drawcall.h \
-  /Users/marcinzawadiak/Desk/SDLGAME/utils/size.h \
   /opt/homebrew/include/SDL2/SDL.h \
   /opt/homebrew/include/SDL2/SDL_assert.h \
   /opt/homebrew/include/SDL2/SDL_atomic.h \
@@ -1117,6 +1119,10 @@ CMakeFiles/Shattered-Vault.dir/src/main.cc.o: /Users/marcinzawadiak/Desk/SDLGAME
 /opt/homebrew/include/SDL2/SDL.h:
 
 /Users/marcinzawadiak/Desk/SDLGAME/utils/drawcall.h:
+
+/Users/marcinzawadiak/Desk/SDLGAME/utils/clock.hh:
+
+/Users/marcinzawadiak/Desk/SDLGAME/include/camera.hh:
 
 /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include/stdint.h:
 
@@ -1263,8 +1269,6 @@ CMakeFiles/Shattered-Vault.dir/src/main.cc.o: /Users/marcinzawadiak/Desk/SDLGAME
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/strings.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/string.h:
-
-/Users/marcinzawadiak/Desk/SDLGAME/utils/size.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/stdio.h:
 
@@ -2513,6 +2517,8 @@ CMakeFiles/Shattered-Vault.dir/src/main.cc.o: /Users/marcinzawadiak/Desk/SDLGAME
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__assertion_handler:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/c++/v1/__algorithm/ranges_transform.h:
+
+/Users/marcinzawadiak/Desk/SDLGAME/src/camera.cc:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.2.sdk/usr/include/___wctype.h:
 

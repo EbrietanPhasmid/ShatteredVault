@@ -1055,7 +1055,9 @@ CMakeFiles/Shattered-Vault.dir/src/main.cc.o: \
   /opt/homebrew/include/SDL2/SDL_locale.h \
   /opt/homebrew/include/SDL2/SDL_misc.h \
   /opt/homebrew/include/SDL2/SDL_image.h \
+  /Users/marcinzawadiak/Desk/SDLGAME/utils/clock.hh \
   /Users/marcinzawadiak/Desk/SDLGAME/src/windowrenderer.cc \
   /Users/marcinzawadiak/Desk/SDLGAME/include/windowrenderer.hh \
   /Users/marcinzawadiak/Desk/SDLGAME/utils/drawcall.h \
-  /Users/marcinzawadiak/Desk/SDLGAME/utils/size.h
+  /Users/marcinzawadiak/Desk/SDLGAME/src/camera.cc \
+  /Users/marcinzawadiak/Desk/SDLGAME/include/camera.hh

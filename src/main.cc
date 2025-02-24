@@ -9,13 +9,17 @@
 #include "SDL.h"
 #include "SDL_image.h"
 
+#include "clock.hh"
+
 #include "windowrenderer.cc"
+#include "camera.cc"
 
 #define SCREEN_WIDTH 1920
 #define SCREEN_HEIGHT 1080
+#define WORLD_WIDTH 640
+#define WORLD_HEIGHT 360
 
-#define SPRITE_SIZE 32
-// constexpr int SCALE_VALUE = SCREEN_WIDTH/SPRITE_SIZE;
+constexpr int SCALE_VALUE = SCREEN_WIDTH/WORLD_WIDTH;
 
 int main() {
 
@@ -31,10 +35,15 @@ int main() {
               << "SDL ERROR: " << SDL_GetError() << std::endl;
   }
 
-  WindowRenderer window_renderer =
+  WindowRenderer window =
       WindowRenderer("Shattered Vault", SCREEN_WIDTH, SCREEN_HEIGHT);
 
   bool game_running = true;
+
+  Clock clock;
+  Camera camera = Camera(SCREEN_WIDTH,SCREEN_HEIGHT);
+  double* delta_time = &(clock.delta_time);
+
   while (game_running) {
     SDL_Event event;
     SDL_PollEvent(&event);
@@ -43,13 +52,18 @@ int main() {
       game_running = false;
     }
 
-    // --------------------------------------- GAME LOOP
-    window_renderer.clear();
-    SDL_Texture* texture = window_renderer.load_texture("enemy.png");
-    window_renderer.draw_texture(texture,0,0,3);
-    window_renderer.draw();
-    // ----------------------------------------------------------------------------------------
+    window.clear();
+    clock.tick();
+    // --------------------------------------- GAME LOOP --------------------------------------
+    
+    SDL_Texture* texture = window.load_texture("enemy.png");
+    SDL_Point origin{0,0};
+    camera.zoom(*delta_time,-1);
+    std::cout << camera.get_zoom() << std::endl;
+    window.draw_texture(texture,camera.apply_camera_transform(&origin),SCALE_VALUE*camera.get_zoom());
 
+    // ----------------------------------------------------------------------------------------
+    window.draw();
   }
   SDL_Quit();
   return 0;
