@@ -24,7 +24,7 @@ target_include_directories(${PROJECT_NAME} PRIVATE include utils ${SDL2_INCLUDE_
 target_link_libraries(${PROJECT_NAME} PRIVATE ${SDL2_LIBRARIES} ${SDL2_IMAGE_LIBRARIES})
 
 # Compiler flags
-target_compile_options(${PROJECT_NAME} PRIVATE -Wall -Werror)
+target_compile_options(${PROJECT_NAME} PRIVATE -Wextra -Wall -Werror)
 
 # Google Test using FetchContent
 include(FetchContent)

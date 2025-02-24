@@ -36,8 +36,9 @@ void WindowRenderer::draw() {
   SDL_RenderPresent(renderer);
 }
 
-SDL_Texture* WindowRenderer::load_texture(std::string file_path) {
+SDL_Texture* WindowRenderer::load_texture(std::string _file_path) {
   SDL_Texture *texture{NULL};
+  std::string file_path = SDL_GetBasePath() + std::string("../assets/textures/") + _file_path;
   texture = IMG_LoadTexture(renderer, file_path.c_str());
   if (texture == NULL) {
     std::cout << "Texture could not be loaded. No texture found at path "
@@ -51,6 +52,20 @@ void WindowRenderer::clear() {
   SDL_RenderClear(renderer);
 }
 
-void WindowRenderer::draw_texture(const DrawCall* const & draw_call) {
-  SDL_RenderCopy(renderer, draw_call->texture, NULL, draw_call->rect);
+void WindowRenderer::draw_texture(SDL_Texture* const & texture, int & x, int & y, int scale = 1) {
+  int width, height;
+  SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+  width *= scale;
+  height *= scale;
+  SDL_Rect rect{x,y,width,height};
+  SDL_RenderCopy(renderer, texture, NULL,&rect); 
+}
+
+void WindowRenderer::draw_texture(SDL_Texture* const & texture, int && x, int && y, int scale = 1) {
+  int width, height;
+  SDL_QueryTexture(texture, NULL, NULL, &width, &height);
+  width *= scale;
+  height *= scale;
+  SDL_Rect rect{x,y,width,height};
+  SDL_RenderCopy(renderer, texture, NULL,&rect); 
 }

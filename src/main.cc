@@ -15,7 +15,7 @@
 #define SCREEN_HEIGHT 1080
 
 #define SPRITE_SIZE 32
-constexpr int SCALE_VALUE = SCREEN_WIDTH/SPRITE_SIZE;
+// constexpr int SCALE_VALUE = SCREEN_WIDTH/SPRITE_SIZE;
 
 int main() {
 
@@ -35,7 +35,6 @@ int main() {
       WindowRenderer("Shattered Vault", SCREEN_WIDTH, SCREEN_HEIGHT);
 
   bool game_running = true;
-  int shit = 0;
   while (game_running) {
     SDL_Event event;
     SDL_PollEvent(&event);
@@ -46,13 +45,8 @@ int main() {
 
     // --------------------------------------- GAME LOOP
     window_renderer.clear();
-    SDL_Texture* texture = window_renderer.load_texture(SDL_GetBasePath() + std::string("../assets/textures/enemy.png"));
-    int width, height = 0;
-    SDL_QueryTexture(texture,NULL,NULL,&width,&height);
-    shit++;
-    SDL_Rect rect {shit,shit,width*3,height*3};
-    const DrawCall draw_call = {texture, &rect};
-    window_renderer.draw_texture(&draw_call);
+    SDL_Texture* texture = window_renderer.load_texture("enemy.png");
+    window_renderer.draw_texture(texture,0,0,3);
     window_renderer.draw();
     // ----------------------------------------------------------------------------------------
 

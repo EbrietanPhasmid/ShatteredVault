@@ -12,7 +12,8 @@ public:
   ~WindowRenderer();
 
   SDL_Texture* load_texture(std::string file_path);
-  void draw_texture(const DrawCall* const & draw_call);
+  void draw_texture(SDL_Texture* const & texture, int & x, int & y, int scale);
+  void draw_texture(SDL_Texture* const & texture, int && x, int && y, int scale);
   void clear();
   void draw();
 
