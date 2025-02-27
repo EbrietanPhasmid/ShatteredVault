@@ -13,9 +13,21 @@ void Camera::zoom(double & delta_time, int8_t direction) {
   if (_zoom < MIN_ZOOM ) {_zoom = MIN_ZOOM;}
 }
 SDL_Point* Camera::apply_camera_transform(SDL_Point* position) {
-  position->x += viewport_width/2;
-  position->y += viewport_height/2;
+  position->x += viewport_width/2 - this->position.x;
+  position->y += viewport_height/2 - this->position.y;
   return position;
 }
 double Camera::get_zoom() { return _zoom;}
 SDL_Point* Camera::get_position() {return &position;} 
+void Camera::move(int & x, int & y) {
+  SDL_Point* position = get_position();
+  int _x {position->x};
+  int _y {position->y};
+  set_position(_x + x, _y + y);
+}
+void Camera::move(int && x, int && y) {
+  SDL_Point* position = get_position();
+  int _x {position->x};
+  int _y {position->y};
+  set_position(_x + x, _y + y);
+}

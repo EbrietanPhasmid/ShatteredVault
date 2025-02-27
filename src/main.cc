@@ -42,7 +42,9 @@ int main() {
 
   Clock clock;
   Camera camera = Camera(SCREEN_WIDTH,SCREEN_HEIGHT);
-  //double* delta_time = &(clock.delta_time);
+  double* delta_time = &(clock.delta_time);
+
+  SDL_Point* pos;
 
   while (game_running) {
     SDL_Event event;
@@ -59,6 +61,10 @@ int main() {
     SDL_Texture* texture = window.load_texture("enemy.png");
     SDL_Point origin{0,0};
     window.draw_texture(texture,camera.apply_camera_transform(&origin),SCALE_VALUE*camera.get_zoom());
+    camera.move(0,-1);
+    camera.zoom(*delta_time,1);
+    pos = camera.get_position();
+    std::cout << "Position: ( " << pos->x << " | " << pos->y << " )\nZoom: " << camera.get_zoom() << std::endl;
 
     // ----------------------------------------------------------------------------------------
     window.draw();

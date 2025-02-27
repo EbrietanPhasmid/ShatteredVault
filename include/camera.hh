@@ -14,6 +14,8 @@ public:
   SDL_Point* apply_camera_transform(SDL_Point* position);
   double get_zoom();
   SDL_Point* get_position();
+  void move(int & x, int & y);
+  void move(int && x, int && y);
 private:
   int viewport_width, viewport_height;
   double _zoom = 1;
